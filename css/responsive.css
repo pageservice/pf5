@@ -45,6 +45,85 @@
   header .wrap nav ul.enb{
     display: none;
   }
+  header .wrap nav .wgnb{
+    width: 80%;
+    height: 100vh;
+    left: -80%;
+    top:0;
+    background-color: white;
+    transition: 1s;
+    display: block !important;
+  }
+  /* 추가0  */
+  header .wrap nav .wgnb .wsub{
+    padding-left:30px;
+    display: initial;
+    position: initial;
+  }
+  header .wrap nav .wgnb h2{
+    display: block;
+    cursor: pointer;
+    font-size: 19px;
+    line-height: 3;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    opacity: 0.7;
+    color: #333;
+  }
+  .currenH2{
+   color: blue;
+  }
+  header .wrap nav .wgnb h2::after{
+    content: "";
+    display: inline-block;
+    width: 31px;
+    height: 31px;
+    background-image: url(../img/expand.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: 0.5s;
+  }
+  header .wrap nav .wgnb h2.currenH2::after{
+    transform: rotate(-180deg);
+  }
+  header .wrap nav .wgnb ul{
+    text-align: left;
+    display: none;
+    background-color:#eee;
+    margin-left: -50px;
+    margin-right: -20px;
+    padding-left: 50px;
+  }
+  
+  header .wrap nav .wgnb ul.sub1{
+  display: initial;
+  display: none;
+  }
+  header .wrap nav .wgnb ul.sub2{
+  display: none;
+  }
+  header .wrap nav .wgnb ul li{
+
+  }
+  header .wrap nav .wgnb ul.sub1 > li:nth-child(n+4){
+  border-left: initial;
+  }
+  header .wrap nav .wgnb ul li a{
+    display: block;
+    line-height: 3;
+  }
+  header .wrap nav .wgnb ul.sub1 > li > a{
+    
+  color: #333;
+  }
+  header .wrap nav .wgnb ul li:not(:first-child) a{
+    border-top:1px solid #ccc;
+  }
+  header .wrap nav .wgnb ul.sub1 > li:nth-child(n+4) a{
+    
+  }
+  /* 추가1   */
   header .wrap nav{
     grid-template-columns: auto 1fr auto;
     grid-template-rows: 50px;
