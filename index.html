@@ -245,11 +245,7 @@
                     $("header .wrap nav .wgnb").slideUp();
                 });
 
-            // top버튼 클릭하면 실행하시오(문서를 애니메이트하시오)
-                $("footer .btop").click(function(){
-                    $("html,body").animate({scrollTop:0},1000);//문서스크롤 애니
-                });
-            }
+            
             $("#top").load("header.html",function(){
                 doc();
             });
@@ -535,7 +531,16 @@
             });
 
             // footer로드
-            $("footer").load("footer.html");
+            function topani(){
+                // top버튼 클릭하면 실행하시오(문서를 애니메이트하시오)
+                $("footer .btop").click(function(){
+                    $("html,body").animate({scrollTop:0},1000);//문서스크롤 애니
+                });
+            }
+
+            $("footer").load("footer.html",function(){
+                topani();
+            });
         });
     </script>
 
