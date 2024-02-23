@@ -22,7 +22,7 @@
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.4.min.js"></script>
     <script type="text/javascript"> 
         $(document).ready(function(){
-	        var doc = function(){
+	        
             // 목록항목의 p와 a를 둘러싸시오
                 $("#product ul.list li").each(function(){// each()는 앞요소갯수만큼 순차적으로 실행하시오; 
                     $(this).children("p,a").wrapAll("<div class='wtext'></div>"); 
@@ -249,11 +249,8 @@
                 $("footer .btop").click(function(){
                     $("html,body").animate({scrollTop:0},1000);//문서스크롤 애니
                 });
-            };
-            $("#top").load("header.html", function() {
-                    // doc 함수 호출
-                    doc();
-            });
+            
+            $("#top").load("header.html");
             $("footer").load("footer.html");
         });
     </script> 
