@@ -497,6 +497,19 @@
 
             // aside 로드 
             function asideani(){
+                (window).scroll(function(){
+
+                    // 사이드 애니
+                    if($(window).scrollTop()>$("#subtitle").height()+40){
+                        // 탑 애니
+                        //탑요소에 클래스를 붙이시오(topFix)
+                        $("footer .btop").addClass("topFix");
+                    }else{ // 위 조건이 안맞으면(그렇치 않으면)
+                        $("footer .btop").removeClass("topFix"); // 탑버튼에 클래스를 없애시오
+                    }
+
+                });  
+
                 $("aside .wrap ul.list > li h3").hover(function(){
                 if($(window).width()>1200){
                     $("aside").addClass("sliding");
