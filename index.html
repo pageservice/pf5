@@ -530,7 +530,9 @@
                     $("header .wrap nav .wgnb").removeClass("wgnbShow");
                 });
             }
-            $("aside").load("aside.html");
+            $("aside").load("aside.html",function(){
+                asideani();
+            });
 
             // footer로드
             $("footer").load("footer.html");
