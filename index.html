@@ -70,9 +70,9 @@
                     // 변수명 n , = 넣어라(대입연산자,부호,기호), 1은 숫자데이터
                     // 해석 : 변수 n에 1을 넣어라
                     $("div#subtitle .wrap img").each(function(){
-                        //$("div#subtitle .wrap img:nth-child("+n+")").attr("src","img/m/m-title"+n+".jpg"); 
+                        $("div#subtitle .wrap img:nth-child("+n+")").attr("src","img/m/m-title"+n+".jpg"); 
                         // 문자열과 변수 연결: "문자열"+변수
-                        //n++; // n에 들어있는 값을 1씩 증가시키시오
+                        n++; // n에 들어있는 값을 1씩 증가시키시오
                     });
 
                     //어사이드의 img를 모바일용 이미지로 교체하기
@@ -253,6 +253,7 @@
             $("#top").load("header.html",function(){
                 doc();
             });
+            $("#subtitle").load("subtitle.html");
             $("footer").load("footer.html");
         });
     </script> 
@@ -370,20 +371,7 @@
    <!-- 상단영역 -->
    <header id="top"> </header>
    <!-- 타이틀영역 -->
-   <div id="subtitle" class="height-full">
-        <div class="titleani wrap height-full">
-            <img src="img/i1.jpg" alt="켈리 포스터">
-            <img src="img/i2.jpg" alt="테라 포스터">
-            <img src="img/i3.jpg" alt="참이슬 포스터">
-            <img src="img/i4.jpg" alt="진로 포스터">
-            <img src="img/i5.jpg" alt="필라이트 포스터">
-            <img src="img/i6.jpg" alt="일품진로 OAK43 포스터">
-            <img src="img/i7.jpg" alt="일품진로 포스터">
-            <img src="img/i8.jpg" alt="진로1924 포스터">
-            <img src="img/i9.jpg" alt="매화수 포스터">
-            <img src="img/i10.jpg" alt="에스라이트 포스터">
-        </div>
-   </div>
+   <div id="subtitle" class="height-full"></div>
    <!-- 메인영역 -->
    <main>
         <section id="product">
